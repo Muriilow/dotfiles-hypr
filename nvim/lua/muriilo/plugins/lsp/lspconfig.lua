@@ -1,7 +1,7 @@
 -- Configurar o lsp 
 return {
   "neovim/nvim-lspconfig",
-  event = { "BufRead<LeftMouse>re", "BufNewFile" },
+  event = { "BufReadPre", "BufNewFile" },
   dependencies = {
     "hrsh7th/cmp-nvim-lsp",
     { "antosha417/nvim-lsp-file-operations", config = true },

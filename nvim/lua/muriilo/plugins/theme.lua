@@ -10,6 +10,7 @@ return {
             keywordStyle = { italic = true},
             statementStyle = { bold = true },
             typeStyle = {},
+            transparent = true,
             dimInactive = false,         -- dim inactive window `:h hl-NormalNC`
             theme = "dragon",              -- Load "wave" theme when 'background' option is not set
             background = {               -- map the value of 'background' option to a theme
@@ -33,7 +34,7 @@ return {
                 end
 
                 return {
-                    NvimTreeNormal = { bg = theme.ui.bg_p1},
+                    NvimTreeNormal = { bg = theme.ui.bg_dim},
                     TelescopeTitle = { fg = theme.ui.special, bold = true },
                     TelescopePromptNormal = { bg = theme.ui.bg_p1 },
                     TelescopePromptBorder = { fg = theme.ui.bg_p1, bg = theme.ui.bg_p1 },
