@@ -1,3 +1,4 @@
+-- Mason eh o gerenciador de lsp (permite mostrar sugestões de códigos)
 return {
   "mason-org/mason.nvim",
   dependencies = {

@@ -1,3 +1,4 @@
+-- Tema personalizado, pode mudar para mudar o tema 
 return {
     "rebelot/kanagawa.nvim",
     config = function()

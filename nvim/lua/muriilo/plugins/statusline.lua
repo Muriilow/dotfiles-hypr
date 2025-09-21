@@ -1,3 +1,4 @@
+-- plugin para a barra inferior de status - Olhar Github para ver modificações
 return {
     "nvim-lualine/lualine.nvim",
     dependencies = { "nvim-tree/nvim-web-devicons" },

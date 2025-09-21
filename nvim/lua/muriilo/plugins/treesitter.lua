@@ -1,3 +1,4 @@
+-- Plugin que reenforça cor nas palavras, ajuda na legibilidade
 return {
     "nvim-treesitter/nvim-treesitter",
     build = ":TSUpdate",

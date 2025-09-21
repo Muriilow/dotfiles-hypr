@@ -1,3 +1,4 @@
+-- Plugin para uma melhor linha de buffer
 return {
     'akinsho/bufferline.nvim',
     version = "*",
