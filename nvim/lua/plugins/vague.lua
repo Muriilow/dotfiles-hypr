@@ -62,33 +62,66 @@ return {
             },
 
             -- Override highlights or add new highlights
-            on_highlights = function(highlights, colors) end,
+            on_highlights = function(highlights, colors)
+                local class = colors.keyword
+                local method = colors.func
+
+                highlights.String = { fg = colors.string, italic = true }
+                highlights.Character = { fg = colors.string }
+                highlights["@string"] = { fg = colors.string, italic = true }
+
+                highlights.Type = { fg = colors.type }
+                highlights["@type"] = { fg = colors.type }
+                highlights["@type.builtin"] = { fg = colors.builtin, bold = true }
+                highlights["@lsp.type.type"] = { fg = colors.type }
+                highlights["@lsp.type.builtinType"] = { fg = colors.builtin, bold = true }
+                highlights["@lsp.type.typeParameter"] = { fg = colors.type }
+
+                highlights.Function = { fg = method }
+                highlights["@function"] = { fg = method }
+                highlights["@function.call"] = { fg = method }
+                highlights["@function.builtin"] = { fg = method }
+                highlights["@function.method"] = { fg = method }
+                highlights["@function.method.call"] = { fg = method }
+                highlights["@method"] = { fg = method }
+                highlights["@method.call"] = { fg = method }
+                highlights["@lsp.type.method"] = { fg = method }
+                highlights["@lsp.typemod.method.defaultLibrary"] = { fg = method }
+
+                highlights.Structure = { fg = class }
+                highlights.Typedef = { fg = class }
+                highlights["@type.definition"] = { fg = class }
+                highlights["@lsp.type.class"] = { fg = class }
+                highlights["@lsp.type.enum"] = { fg = class }
+                highlights["@lsp.type.interface"] = { fg = class }
+                highlights["@lsp.type.struct"] = { fg = class }
+            end,
 
             -- Override colors
             colors = {
                 bg = "#0a0a0b",
-                inactiveBg = "#121218",
-                fg = "#b8b8b8",
-                floatBorder = "#6a6a6a",
-                line = "#1a1a1f",
-                comment = "#4d4d5c",
-                builtin = "#9cb8b3",
-                func = "#a86e6e",
-                string = "#b08e6a",
-                number = "#c08a4f",
-                property = "#a7a7b8",
-                constant = "#9292ad",
-                parameter = "#9d819f",
-                visual = "#28282d",
-                error = "#b84c62",
-                warning = "#c99a5c",
-                hint = "#6a7ec4",
-                operator = "#7a8691",
-                keyword = "#5a7a91",
-                type = "#81989e",
-                search = "#354051",
-                plus = "#6b8a57",
-                delta = "#c99a5c",
+                inactiveBg = "#0f0f0f",
+                fg = "#bdae93",
+                floatBorder = "#4a3c31",
+                line = "#1e1e1e",
+                comment = "#4a3c31",
+                builtin = "#5d8b86",
+                func = "#b87586",
+                string = "#4f7e7a",
+                number = "#8c7a6b",
+                property = "#a58678",
+                constant = "#a76f68",
+                parameter = "#b18b7b",
+                visual = "#292523",
+                error = "#c35e5a",
+                warning = "#b1845f",
+                hint = "#5d8b86",
+                operator = "#80736a",
+                keyword = "#c35e5a",
+                type = "#5d8b86",
+                search = "#2c3836",
+                plus = "#5d8b86",
+                delta = "#b1845f",
             }
         })
     end,
