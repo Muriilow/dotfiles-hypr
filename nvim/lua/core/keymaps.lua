@@ -4,9 +4,6 @@ vim.g.mapleader = " "
 -- espaço + n + h: Limpa as marcações
 vim.keymap.set("n", "<leader>nh", ":nohl<CR>", { desc = "Clear search highlights" })
 
--- Deletar uma linha sem copiar o conteúdo em um registrador
-vim.keymap.set("n", "x", '"_dd')
-
 -- acrescentar/diminuir um número
 vim.keymap.set("n", "<leader>+", "<C-a>", { desc = "Increment number" }) -- increment
 vim.keymap.set("n", "<leader>-", "<C-x>", { desc = "Decrement number" }) -- decrement
